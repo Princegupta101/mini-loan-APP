@@ -1,11 +1,5 @@
 # Full Stack Mini Loan App
 
-# Live Demo:
-Access the deployed application here: https://full-stack-mini-loan-app.vercel.app/
-
-# Repository:
-GitHub Repository: https://github.com/kumarnaveen76695/full-stack-mini-loan-app.git
-
 Project Overview
 The Mini Loan App is a full-stack application that allows customers to apply for loans and make repayments, while administrators can approve loans and manage the system. The app has the following key functionalities:
 
