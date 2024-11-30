@@ -1,69 +1,76 @@
-# Full Stack Mini Loan App
+# Mini Loan App
 
-Project Overview
-The Mini Loan App is a full-stack application that allows customers to apply for loans and make repayments, while administrators can approve loans and manage the system. The app has the following key functionalities:
+The **Mini Loan App** is a full-stack application that allows customers to apply for loans and make repayments, while administrators can approve loans and manage the system. This application consists of a backend API built with **Node.js**, **Express.js**, **MongoDB**, and **JWT Authentication** for secure user access. The frontend is a minimal HTML5 interface with form validation.
 
-User Authentication: Secure login and registration for customers and administrators.
-Loan Management:
-Customers can create loan requests.
-Admins can approve loans.
-Repayment Management:
-Customers can view their loans and scheduled repayments.
-Customers can make repayments and track the status of their loans.
-State Management:
-Loans and repayments transition between PENDING, APPROVED, and PAID states.
+## Features
 
-Features:
+### Customer Features:
+- **Register/Login**: Secure registration and login using JWT authentication.
+- **Loan Requests**: Submit loan requests with the amount and term.
+- **View Loans**: View loans belonging to the logged-in customer.
+- **Repayments**: Make repayments and track loan status.
 
-Customer Features:
+### Admin Features:
+- **Approve Loans**: Approve pending loan requests from customers.
+- **Manage Loans**: Update loan statuses and manage customer repayments.
 
-Register/Login: Secure registration and login using JWT authentication.
-Loan Requests: Submit loan requests with the amount and term.
-View Loans: View loans belonging to the logged-in user.
-Repayments: Add repayments and track the status of repayments.
+## Technology Stack
 
-Admin Features:
+- **Frontend**: HTML5, CSS, JavaScript (Minimal UI)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT and bcrypt for secure user authentication
+## Setup Instructions
 
-Approve Loans: Approve pending loans requested by customers.
-Manage Loans: Update loan statuses and manage customer repayments.
+### Prerequisites
 
-Technology Stack:
+- Node.js (v16 or higher)
+- MongoDB (can use local or MongoDB Atlas)
 
-Frontend: HTML5, CSS, JavaScript (Minimal UI)
-Backend: Node.js, Express.js
-Database: MongoDB
-Authentication: JWT and bcrypt for secure user authentication
+## Installation
 
-To satrt this project:
-npm start
+ Clone the project 
 
-To install packages are all for the :
+```bash
+git clone https://github.com/yourusername/mini-loan-app.git
+```
+
+### Setup instruction  for Frontend
+
+1. Move into the directory
+
+```bash
+cd frontend
+```
+2. install  dependenices
+
+```bash
 npm install
+```
+3.  run the server
 
-API Endpoints:
+```bash
+npm run dev
+```
 
-Authentication
+### Setup instruction  for Backend
 
-POST /api/auth/register: Register a new user (customer/admin).
-POST /api/auth/login: Authenticate a user and return a JWT token.
-Loan Management:
-POST /api/loans: Create a new loan request.
-GET /api/loans: Fetch loans (policy-based to fetch customer-specific loans).
-PUT /api/loans/:loanId/approve: Approve a pending loan (admin only).
-Repayment Management:
-POST /api/repayments: Add a repayment for a loan.
-GET /api/repayments: Fetch repayment details for a customer’s loan.
-Usage Instructions
-For Customers:
+1. Move into the directory
 
-Register: Use the registration form to create a customer account.
-Login: Log in with your email and password.
-Apply for a Loan: Submit a loan request by entering the loan amount and term.
-View Loans: Check your loan details, including status and repayment schedule.
-Make Repayments: Add repayments for approved loans.
-For Admins:
+```bash
+cd server
+```
+2. install  dependenices
 
-Login: Use your admin account to log in.
-Approve Loans: Approve pending loan requests from customers.
-Manage Loans: Update repayment and loan statuses as required.
+```bash
+npm install
+```
+3.  run the server
 
+```bash
+npm run dev
+```
+4.  Set up environment variables:
+   Create a `.env` file in the `server` directory and add the following:
+
+```bash
